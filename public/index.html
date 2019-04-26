@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<link rel="stylesheet" type="text/css" href="hello.css">
+<link rel="stylesheet" type="text/css" href="main.css">
 <title>きせかえ</title>
 <meta charset="utf-8">
 </head>
-<body>
-<h1>きせかえゲーム！</h1>
-<h2>せつめい</h2>
-<h3>
-たいへん！たいせつなバックをなくしちゃったよ！
-<p></p>
-かわいくかっこよくコーディネートしてバックを探しにいこう！
-<p></p>
-まずは女の子か男の子かをえらんでね！</h3>
+<body class="p-top">
+<div class="header">
+  <h1>きせかえゲーム！</h1>
+</div>
+<div class="description">
+  <h2>せつめい</h2>
+  <p>たいへん！たいせつなバックをなくしちゃったよ！</p>
+  <p>かわいくかっこよくコーディネートしてバックを探しにいこう！</p>
+  <p>まずは女の子か男の子かをえらんでね！</p>
+</div>
 
-<center><p><img src="pair.png" usemap="#kisekae"
-	alt="きせかえ"></p></center>
-<map name="kisekae">
-<area shape="circle" coords="200,200,100" href="http://133.54.224.240/penshu4_2015/67140380/kisekae/kisekaetestg.php" alt="tail">
-<area shape="circle" coords="400,200,100" href="http://133.54.224.240/penshu4_2015/67140380/kisekae/testboy.php" alt="mouse">
-
-</map>
+<div class="select-gender-area">
+  <a href="kisekaetestg.php" class="girl-img"><img src="images/girl.png" alt="女の子"></a>
+  <a href="testboy.php" class="boy-img"><img src="images/boy.png" alt="男の子"></a>
+</div>
 
 </body>
 </html>
