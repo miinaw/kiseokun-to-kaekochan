@@ -1,3 +1,7 @@
+html {
+  /* <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700" rel="stylesheet"> */
+  font-family: 'Noto Sans JP', sans-serif;
+}
 body {
   margin: 0;
 }
@@ -10,7 +14,7 @@ body {
 }
 h1 {
   margin: auto 0;
-  opacity: 0;
+  opacity: 1;
 }
 .p-top {
   text-align: center;
