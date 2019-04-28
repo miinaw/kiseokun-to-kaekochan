@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<link rel="stylesheet" type="text/css" href="../public/main.css">
+<meta charset="utf-8">
+<title>kisekae</title>
+</head>
+<body>
+<h1>きせおくん</h1>
+<img src="../images/boy1.jpg" alt="きせお" width="200" height="200">
+<img src="../images/boy2.jpg" alt="top" width="200" height="200">
+<img src="../images/boy3.jpg" alt="bottoms" width="200" height="200">
+<img src="../images/boy4.jpg" alt="kutsu"  width="125" height="90">
+<img src='<?php print $topImages[$valueTop] ?>'>
+<form action="testboy.php" method="post">
+  <select name="top"> 
+  <option>nothing</option>
+   <option>top1</option> 
+   <option>top2</option>
+  </select>
+</form>
+</body>
+</html>
