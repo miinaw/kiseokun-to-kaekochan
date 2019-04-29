@@ -24,7 +24,7 @@ a {
 a:hover {
   opacity: .9;
 }
-.p-top {
+.p-top,.p-kiseokun,.p-kaekochan {
   text-align: center;
   background-image: url('images/background.png');
 }
