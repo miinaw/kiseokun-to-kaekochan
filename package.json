@@ -1,0 +1,22 @@
+{
+  "name": "kiseokun-to-kaekochan",
+  "version": "1.0.0",
+  "description": "2016年に作成したきせかえゲーム「きせおくんとかえこちゃん」をgit管理してみる",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miinaw/kiseokun-to-kaekochan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miinaw/kiseokun-to-kaekochan/issues"
+  },
+  "homepage": "https://github.com/miinaw/kiseokun-to-kaekochan#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
