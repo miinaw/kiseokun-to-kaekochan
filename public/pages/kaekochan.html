@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <link rel="stylesheet" href="../main.css">
+    <meta charset="utf-8">
+    <title>kisekae</title>
+  </head>
+  <body class="p-kaekochan">
+    <div id="app">
+      <div class="header">
+        <a href="index.html"><h1>きせかえゲーム！</h1></a>
+      </div>
+      <div class="description">
+        <h1>かえこちゃん</h1>
+        <p>かえこちゃんを可愛くコーディネートしよう！</p>
+        <p>満点を取るとなくなったバックをゲットすることができるよ！</p>
+      </div>
+      <div class="parts-wrap">
+        <img src="../images/girl-head.png" alt="head">
+        <img src="../images/girl-top.png" alt="top">
+        <img src="../images/girl-bottom.png" alt="bottom">
+        <img src="../images/girl-shoes.png" alt="shoes">
+      </div>
+      
+      <h3>★選ぶ★</h3>
+      <div class="select-clothes">
+        <form action="kisekaetestg.php" method="post">
+          <select name="tops"> 
+            <option v-for="top in Tops" :value="top.value">{{ top.name }}</option>
+          </select>
+
+          <select name="bottoms"> 
+            <option v-for="bottom in Bottoms" :value="bottom.value">{{ bottom.name }}</option>
+          </select>
+
+          <select name="Shoes"> 
+            <option v-for="shoes in Shoes" :value="shoes.value">{{ shoes.name }}</option>
+          </select>
+
+          <div class="select-clothes-button">
+            <input type="submit"name="submit" value="これにする！" class="submit-button">
+          </div>
+        </form>
+      </div>
+    </div>
+  <!-- ↓Vue.js の読み込み -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+  <script type="module">
+    // データの読み込み
+    import { TOPS, BOTTOMS, SHOES } from "../data/kaekochanData.js";
+    new Vue({
+      el: '#app',
+      data: {
+        selectedTops: {},
+        selectedBottoms: {},
+        selectedShoes: {},
+      },
+      computed: {
+        Tops: function () {
+          return TOPS;
+        },
+        Bottoms: function () {
+          return BOTTOMS;
+        },
+        Shoes: function () {
+          return SHOES;
+        },
+      },
+      methods: {
+        selectTop: function(key) {
+          this.selectedTop = key;
+          // 「そのまま」の場合
+          if (this.selectedTop === 0) {
+            return;
+          }
+        },
+        selectBottom: function(key) {
+          this.selectedBottom = key;
+          // 「そのまま」の場合
+          if (this.selectedBottom === 0) {
+            return;
+          }
+        },
+        selectShoes: function(key) {
+          this.selectedShoes = key;
+          // 「そのまま」の場合
+          if (this.selectedShoes === 0) {
+            return;
+          }
+        },
+      },
+    });
+  </script>
+</body> 
+</html>
