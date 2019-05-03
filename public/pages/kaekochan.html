@@ -17,9 +17,9 @@
       </div>
       <div class="parts-wrap">
         <img src="../images/girl-head.png" alt="head">
-        <img src="../images/girl-top.png" alt="top">
-        <img src="../images/girl-bottom.png" alt="bottom">
-        <img src="../images/girl-shoes.png" alt="shoes">
+        <img :src="selectedTop.src" alt="top">
+        <img :src="selectedBottom.src" alt="bottom">
+        <img :src="selectedShoes.src" alt="shoes">
       </div>
       
       <h3>★選ぶ★</h3>
@@ -51,9 +51,9 @@
     new Vue({
       el: '#app',
       data: {
-        selectedTops: {},
-        selectedBottoms: {},
-        selectedShoes: {},
+        selectedTop: { id: 0, name: "そのまま", value: 10, src: "../images/girl-top.png" },
+        selectedBottom: { id: 0, name: "そのまま", value: 10, src: "../images/girl-bottom.png" },
+        selectedShoes: { id: 0, name: "そのまま", value: 10, src: "../images/girl-shoes.png" },
       },
       computed: {
         Tops: function () {
@@ -68,10 +68,14 @@
       },
       methods: {
         selectTop: function(key) {
-          this.selectedTop = key;
+          this.selectedTop.id = key;
           // 「そのまま」の場合
-          if (this.selectedTop === 0) {
+          if (this.selectedTop.id === 0) {
             return;
+          } else {
+            for (var i = 0; i < TOPS.length; i++) {
+              selectedTop = TOPS.id.indexOf(key);
+            }
           }
         },
         selectBottom: function(key) {
