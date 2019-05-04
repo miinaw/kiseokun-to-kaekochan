@@ -25,8 +25,8 @@
       <h3>★選ぶ★</h3>
       <div class="select-clothes">
         <form action="kisekaetestg.php" method="post">
-          <select name="tops"> 
-            <option v-for="top in Tops" :value="top.value">{{ top.name }}</option>
+          <select name="tops" @change="selectTop"> 
+            <option v-for="(top, key) in Tops" :value="top.value">{{ top.name }}</option>
           </select>
 
           <select name="bottoms"> 
