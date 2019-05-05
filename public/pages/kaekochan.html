@@ -72,9 +72,11 @@
           // 「そのまま」の場合
           if (this.selectedTop.id === 0) {
             return;
-          } else {
-            for (var i = 0; i < TOPS.length; i++) {
-              selectedTop = TOPS.id.indexOf(key);
+          }
+          for (var i = 0; i < TOPS.length; i++) {
+            console.log("aaa")
+            if( TOPS.id === key) {
+              selectedTop = TOPS[i];
             }
           }
         },
