@@ -17,6 +17,7 @@
       </div>
       <div class="parts-wrap">
         <img src="../images/girl-head.png" alt="head">
+        <p>{{ selectedTop.name }}</p>
         <img :src="selectedTop.src" alt="top">
         <img :src="selectedBottom.src" alt="bottom">
         <img :src="selectedShoes.src" alt="shoes">
@@ -25,8 +26,8 @@
       <h3>★選ぶ★</h3>
       <div class="select-clothes">
         <form action="kisekaetestg.php" method="post">
-          <select name="tops" @change="selectTop"> 
-            <option v-for="(top, key) in Tops" :value="top.value">{{ top.name }}</option>
+          <select v-model="selectedTop" name="tops" @change="selectTop"> 
+            <option v-for="top in Tops" :value="top.value">{{ top.name }}</option>
           </select>
 
           <select name="bottoms"> 
@@ -51,7 +52,7 @@
     new Vue({
       el: '#app',
       data: {
-        selectedTop: { id: 0, name: "そのまま", value: 10, src: "../images/girl-top.png" },
+        selectedTop: {},
         selectedBottom: { id: 0, name: "そのまま", value: 10, src: "../images/girl-bottom.png" },
         selectedShoes: { id: 0, name: "そのまま", value: 10, src: "../images/girl-shoes.png" },
       },
@@ -67,18 +68,21 @@
         },
       },
       methods: {
-        selectTop: function(key) {
-          this.selectedTop.id = key;
+        selectTop: function() {
+          this.selectedTop.id = 0;
           // 「そのまま」の場合
-          if (this.selectedTop.id === 0) {
-            return;
-          }
-          for (var i = 0; i < TOPS.length; i++) {
-            console.log("aaa")
-            if( TOPS.id === key) {
-              selectedTop = TOPS[i];
-            }
-          }
+          // if (this.selectedTop.id === 0) {
+          //   return;
+          // }
+          // for (var i = 0; i < TOPS.length; i++) {
+          //   console.log("aaa")
+          //   console.log(key)
+          //   console.log(TOPS[i].id)
+          //   if( TOPS.id === key) {
+          //     console.log("ok")
+          //     selectedTop = TOPS;
+          //   }
+          // }
         },
         selectBottom: function(key) {
           this.selectedBottom = key;
