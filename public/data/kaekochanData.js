@@ -17,6 +17,12 @@ export const TOPS = [
     score: 10,
     src: "../images/girl-top_yellow.png"
   },
+  {
+    id: 3,
+    name: "ハート",
+    score: 40,
+    src: "../images/girl-top_heart.png"
+  },
 ];
 
 export const BOTTOMS = [
