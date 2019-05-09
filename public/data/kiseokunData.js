@@ -2,19 +2,19 @@ export const TOPS = [
   { 
     id: 0,
     name: "そのまま",
-    score: 10,
+    score: 20,
     src: "../images/boy-top.png"
   },
   { 
     id: 1,
-    name: "あお",
-    score: 30,
-    src: "../images/boy-top_blue.png"
+    name: "しろ",
+    score: 10,
+    src: "../images/boy-top_white.png"
   },
   {
     id: 2,
     name: "みどり",
-    score: 10,
+    score: 30,
     src: "../images/boy-top_green.png"
   },
 ];
@@ -28,9 +28,9 @@ export const BOTTOMS = [
   },
   { 
     id: 1,
-    name: "あお",
+    name: "グレー",
     score: 20,
-    src: "../images/boy-bottom_blue.png"
+    src: "../images/boy-bottom_gray.png"
   },
   {
     id: 2,
