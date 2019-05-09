@@ -52,9 +52,9 @@
     new Vue({
       el: '#app',
       data: {
-        selectedTop: {},
-        selectedBottom: { id: 0, name: "そのまま", value: 10, src: "../images/girl-bottom.png" },
-        selectedShoes: { id: 0, name: "そのまま", value: 10, src: "../images/girl-shoes.png" },
+        selectedTop: TOPS[0], // 初期値
+        selectedBottom:  BOTTOMS[0], // 初期値
+        selectedShoes: SHOES[0], // 初期値
       },
       computed: {
         Tops: function () {
