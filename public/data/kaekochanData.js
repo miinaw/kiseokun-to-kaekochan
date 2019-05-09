@@ -44,7 +44,7 @@ export const SHOES = [
   { 
     id: 0,
     name: "そのまま",
-    score: 10,
+    score: 30,
     src: "../images/girl-shoes.png"
   },
   { 
@@ -55,8 +55,8 @@ export const SHOES = [
   },
   {
     id: 2,
-    name: "ちゃいろ",
-    score: 30,
-    src: "../images/girl-shoes_brown.png"
+    name: "しろ",
+    score: 10,
+    src: "../images/girl-shoes_white.png"
   },
 ];
