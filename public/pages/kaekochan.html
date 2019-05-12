@@ -27,7 +27,7 @@
       
       <h3>★選ぶ★</h3>
       <div class="select-clothes">
-        <form action="kisekaetestg.php" method="post">
+        <form action="kisekaetestg.php" method="post" @submit="submit">
           <select v-model="selectedTop" @change="selectTop" name="tops">
             <option v-for="top in Tops" :value="top.id">{{ top.name }}</option>
           </select>
@@ -91,6 +91,9 @@
             }
           }
         },
+        submit: function() {
+          
+        }
       },
     });
   </script>
